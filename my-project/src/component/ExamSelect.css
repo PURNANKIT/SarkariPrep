@@ -1,0 +1,37 @@
+.exam-select {
+  padding: 20px;
+}
+
+.exam-select label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.exam-select select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.exam-card {
+  margin-top: 15px;
+  background: #f0f4ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.exam-card h4 {
+  color: #1d4ed8;
+}
+
+.subscribe-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
