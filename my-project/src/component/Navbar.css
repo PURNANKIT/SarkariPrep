@@ -187,6 +187,32 @@
   font-size: 0.9rem;
 }
 
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-text {
+  font-weight: 600;
+  color: #fd0c0c;
+}
+
+.logout-btn {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff1e1e;
+}
+
 /* Fade out animation */
 @keyframes fadeOut {
   0% { opacity: 1; }

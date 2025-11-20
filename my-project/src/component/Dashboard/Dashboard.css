@@ -1,0 +1,135 @@
+/* === Dashboard (open layout, below header) === */
+.dashboard-container {
+  text-align: center;
+  padding: 22px 16px;
+  margin-top: 10px; /* small gap below header */
+  color: #1c2a43;
+  width: 100%;
+}
+
+/* Title & description */
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.dashboard-desc {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+/* === Button Grid (full width, responsive) === */
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive columns */
+  justify-items: center;
+  align-items: center;
+  gap: 48px 80px;   /* vertical gap 48px, horizontal 80px */
+  padding: 0 60px;  /* left-right margin inside container */
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Circular buttons */
+.button-row button {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* Hover effect */
+.button-row button:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon */
+.button-row button i {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* Label under icon */
+.btn-label {
+  display: block;
+  font-size: 0.82rem;
+  margin-top: 2px;
+  text-align: center;
+}
+
+/* Colors for each button (keeps consistent order) */
+.button-row button:nth-child(1) {
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+}
+.button-row button:nth-child(2) {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+.button-row button:nth-child(3) {
+  background: linear-gradient(135deg, #007bff, #0047cb);
+}
+.button-row button:nth-child(4) {
+  background: linear-gradient(135deg, #9c27b0, #6a0080);
+}
+.button-row button:nth-child(5) {
+  background: linear-gradient(135deg, #e91e63, #ad1457);
+}
+
+/* subtle icon glow on hover */
+.button-row button:hover i {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 992px) {
+  .button-row {
+    gap: 40px 60px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title { font-size: 1.6rem; }
+  .button-row {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 32px 40px;
+    padding: 0 20px;
+  }
+
+  .button-row button {
+    width: 95px;
+    height: 95px;
+    font-size: 0.82rem;
+  }
+
+  .button-row button i { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .button-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding: 0 12px;
+  }
+
+  .button-row button {
+    width: 90px;
+    height: 90px;
+  }
+}

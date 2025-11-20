@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Signup.css";
+import { useNavigate } from "react-router-dom";
 
-const Signup = ({ onClose }) => {
+const Signup = ({ onClose, onSuccess }) => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -13,10 +16,11 @@ const Signup = ({ onClose }) => {
   });
 
   const [error, setError] = useState("");
+  const [okMsg, setOkMsg] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((p) => ({ ...p, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -43,26 +47,35 @@ const Signup = ({ onClose }) => {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          full_name: formData.fullName,
-          email: formData.email,
-          mobile: formData.mobile,
-          job_preparation: formData.jobPrep,
-          preparation_year: Number(formData.examYear),
-          password: formData.password,
-        }),
-      });
+      const res = await fetch(
+        "https://informational-paxton-unliquidated.ngrok-free.dev/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            full_name: formData.fullName,
+            email: formData.email,
+            mobile: formData.mobile,
+            job_preparation: formData.jobPrep,
+            preparation_year: formData.examYear,
+            password: formData.password,
+          }),
+        }
+      );
 
       const data = await res.json();
+
       if (!res.ok) {
-        setError(data.msg || "❌ Signup failed!");
-      } else {
-        console.log("✅ Signup Success", data);
-        onClose();
+        setError(data.message || "❌ Signup failed!");
+        return;
       }
+
+      setOkMsg(
+        "✅ Signup successful! Please check your email for verification."
+      );
+      onSuccess?.(formData.email);
+
+      setTimeout(() => onClose?.(), 2000);
     } catch (err) {
       console.error(err);
       setError("❌ Server error, try again later");
@@ -77,7 +90,9 @@ const Signup = ({ onClose }) => {
         </button>
 
         <h2>Create Your Account</h2>
+
         {error && <p className="error">{error}</p>}
+        {okMsg && <p className="success">{okMsg}</p>}
 
         <form onSubmit={handleSubmit} className="signup-form">
           <input
@@ -87,6 +102,7 @@ const Signup = ({ onClose }) => {
             onChange={handleChange}
             placeholder="Full Name"
           />
+
           <input
             type="email"
             name="email"
@@ -94,6 +110,7 @@ const Signup = ({ onClose }) => {
             onChange={handleChange}
             placeholder="Email Address"
           />
+
           <input
             type="text"
             name="mobile"
@@ -102,18 +119,28 @@ const Signup = ({ onClose }) => {
             placeholder="Mobile Number"
           />
 
-          <select name="jobPrep" value={formData.jobPrep} onChange={handleChange}>
+          {/* UPDATED JOB PREP OPTIONS */}
+          <select
+            name="jobPrep"
+            value={formData.jobPrep}
+            onChange={handleChange}
+          >
             <option value="">Select Job Preparation</option>
-            <option value="UPSC">UPSC</option>
-            <option value="SSC">SSC</option>
-            <option value="Bank">Bank</option>
-            <option value="Railway">Railway</option>
-            <option value="Defence">Defence</option>
-            <option value="State Exam">State Exam</option>
-            <option value="Other">Other</option>
+            <option value="ssc_cgl">SSC CGL</option>
+            <option value="ssc_chsl">SSC CHSL</option>
+            <option value="ssc_gd">SSC GD</option>
+            <option value="railway">Railway Exams</option>
+            <option value="banking">Banking Exams</option>
+            <option value="upsc">UPSC</option>
+            <option value="up_police">UP Police</option>
+            <option value="state_police">State Police</option>
           </select>
 
-          <select name="examYear" value={formData.examYear} onChange={handleChange}>
+          <select
+            name="examYear"
+            value={formData.examYear}
+            onChange={handleChange}
+          >
             <option value="">Select Exam Year</option>
             <option value="2025">2025</option>
             <option value="2026">2026</option>
@@ -128,6 +155,7 @@ const Signup = ({ onClose }) => {
             onChange={handleChange}
             placeholder="Password"
           />
+
           <input
             type="password"
             name="confirmPassword"

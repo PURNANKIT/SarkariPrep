@@ -1,0 +1,1372 @@
+{
+  "ssc_cgl": {
+    "tier_1": {
+      "Quantitative-Aptitude": {
+        "Arithmetic": [
+          {
+            "id": "ssc_cgl_t1_arith_q1",
+            "q_en": "If 5x + 7 = 2x + 19, what is x?",
+            "options_en": ["2", "3", "4", "5"],
+            "answer": 2
+          }
+        ],
+        "Algebra": [
+          {
+            "id": "ssc_cgl_t1_algebra_q1",
+            "q_en": "Solve x: x^2 - 5x + 6 = 0",
+            "options_en": ["1 and 6", "2 and 3", "-2 and -3", "3 and 5"],
+            "answer": 1
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "ssc_cgl_t1_geometry_q1",
+            "q_en": "Sum of interior angles of a hexagon is:",
+            "options_en": ["360°", "540°", "720°", "900°"],
+            "answer": 2
+          }
+        ],
+        "Mensuration": [
+          {
+            "id": "ssc_cgl_t1_mensuration_q1",
+            "q_en": "Area of rectangle with length 12 cm and breadth 5 cm is:",
+            "options_en": ["60 cm²", "17 cm²", "30 cm²", "144 cm²"],
+            "answer": 0
+          }
+        ],
+        "Number System": [
+          {
+            "id": "ssc_cgl_t1_number_q1",
+            "q_en": "LCM of 12 and 18 is:",
+            "options_en": ["18", "36", "54", "72"],
+            "answer": 1
+          }
+        ],
+        "Percentage": [
+          {
+            "id": "ssc_cgl_t1_percentage_q1",
+            "q_en": "20% of 250 is:",
+            "options_en": ["25", "50", "60", "40"],
+            "answer": 1
+          }
+        ],
+        "Ratio & Proportion": [
+          {
+            "id": "ssc_cgl_t1_ratio_q1",
+            "q_en": "If a:b = 2:3 and b:c = 4:5, a:c = ?",
+            "options_en": ["8:15", "2:5", "4:5", "3:4"],
+            "answer": 0
+          }
+        ],
+        "Profit & Loss": [
+          {
+            "id": "ssc_cgl_t1_profit_q1",
+            "q_en": "If CP = ₹500 and SP = ₹600, profit percent is:",
+            "options_en": ["10%", "15%", "20%", "25%"],
+            "answer": 2
+          }
+        ],
+        "Time, Speed & Distance": [
+          {
+            "id": "ssc_cgl_t1_tsd_q1",
+            "q_en": "A runs at 60 km/h. How far in 30 minutes?",
+            "options_en": ["10 km", "15 km", "20 km", "30 km"],
+            "answer": 1
+          }
+        ],
+        "Simple & Compound Interest": [
+          {
+            "id": "ssc_cgl_t1_interest_q1",
+            "q_en": "Simple interest on ₹1000 at 5% p.a. for 2 years is:",
+            "options_en": ["₹50", "₹100", "₹150", "₹200"],
+            "answer": 1
+          }
+        ]
+      },
+      "Reasoning": {
+        "Verbal Reasoning": [
+          {
+            "id": "ssc_cgl_t1_verbal_q1",
+            "q_en": "Hand : Glove :: Foot : ?",
+            "options_en": ["Shoe", "Sock", "Cap", "Ring"],
+            "answer": 1
+          }
+        ],
+        "Non-Verbal Reasoning": [
+          {
+            "id": "ssc_cgl_t1_nonverbal_q1",
+            "q_en": "Find next in series: 2,4,8,16,?",
+            "options_en": ["18", "20", "24", "32"],
+            "answer": 3
+          }
+        ],
+        "Analogy": [
+          {
+            "id": "ssc_cgl_t1_analogy_q1",
+            "q_en": "Bird : Nest :: Bee : ?",
+            "options_en": ["Hive", "Hole", "Web", "Nest"],
+            "answer": 0
+          }
+        ],
+        "Classification": [
+          {
+            "id": "ssc_cgl_t1_class_q1",
+            "q_en": "Odd one out: Apple, Mango, Carrot, Banana",
+            "options_en": ["Apple", "Mango", "Carrot", "Banana"],
+            "answer": 2
+          }
+        ],
+        "Series": [
+          {
+            "id": "ssc_cgl_t1_series_q1",
+            "q_en": "5,10,20,40,? next is:",
+            "options_en": ["60", "80", "70", "100"],
+            "answer": 1
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "ssc_cgl_t1_code_q1",
+            "q_en": "If CAT = DBU (each letter +1), DOG = ?",
+            "options_en": ["EPH", "EPI", "EPJ", "EQH"],
+            "answer": 0
+          }
+        ],
+        "Blood Relations": [
+          {
+            "id": "ssc_cgl_t1_blood_q1",
+            "q_en": "A is brother of B. B is mother of C. A is C's?",
+            "options_en": ["Uncle", "Father", "Brother", "Grandfather"],
+            "answer": 0
+          }
+        ],
+        "Direction Sense": [
+          {
+            "id": "ssc_cgl_t1_dir_q1",
+            "q_en": "Facing East, turn 90° right; you face:",
+            "options_en": ["North", "South", "West", "East"],
+            "answer": 1
+          }
+        ]
+      },
+      "English": {
+        "Grammar": [
+          {
+            "id": "ssc_cgl_t1_grammar_q1",
+            "q_en": "Choose correct: 'He ____ to school every day.'",
+            "options_en": ["go", "goes", "gone", "going"],
+            "answer": 1
+          }
+        ],
+        "Comprehension": [
+          {
+            "id": "ssc_cgl_t1_comp_q1",
+            "q_en": "Main idea questions are from a passage — what skill tests?",
+            "options_en": ["Vocabulary", "Inference", "Pronunciation", "Spelling"],
+            "answer": 1
+          }
+        ],
+        "Error Detection": [
+          {
+            "id": "ssc_cgl_t1_error_q1",
+            "q_en": "Find error: 'She don't like tea.'",
+            "options_en": ["She", "don't", "like", "tea"],
+            "answer": 1
+          }
+        ],
+        "Synonyms & Antonyms": [
+          {
+            "id": "ssc_cgl_t1_syn_q1",
+            "q_en": "Synonym of 'Abundant' is:",
+            "options_en": ["Scarce", "Plentiful", "Weak", "Short"],
+            "answer": 1
+          }
+        ],
+        "Vocabulary": [
+          {
+            "id": "ssc_cgl_t1_vocab_q1",
+            "q_en": "Meaning of 'brevity' is:",
+            "options_en": ["Length", "Shortness", "Strength", "Brightness"],
+            "answer": 1
+          }
+        ],
+        "Sentence Completion": [
+          {
+            "id": "ssc_cgl_t1_sent_q1",
+            "q_en": "I ___ to the market yesterday.",
+            "options_en": ["go", "went", "gone", "going"],
+            "answer": 1
+          }
+        ]
+      },
+      "General-Awareness": {
+        "History": [
+          {
+            "id": "ssc_cgl_t1_hist_q1",
+            "q_en": "Who was first President of India?",
+            "options_en": ["Dr. Rajendra Prasad", "Dr. S. Radhakrishnan", "Jawaharlal Nehru", "Sardar Patel"],
+            "answer": 0
+          }
+        ],
+        "Polity": [
+          {
+            "id": "ssc_cgl_t1_polity_q1",
+            "q_en": "Head of state in India is:",
+            "options_en": ["President", "Prime Minister", "Governor", "Chief Justice"],
+            "answer": 0
+          }
+        ],
+        "Economy": [
+          {
+            "id": "ssc_cgl_t1_econ_q1",
+            "q_en": "RBI stands for:",
+            "options_en": ["Reserve Bank of India", "Regional Bank of India", "Rural Bank of India", "National Bank of India"],
+            "answer": 0
+          }
+        ],
+        "Science": [
+          {
+            "id": "ssc_cgl_t1_science_q1",
+            "q_en": "Water boils at (sea level):",
+            "options_en": ["90°C", "100°C", "80°C", "120°C"],
+            "answer": 1
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "ssc_cgl_t1_current_q1",
+            "q_en": "Which international body publishes the World Economic Outlook? (IMF/World Bank)",
+            "options_en": ["IMF", "World Bank", "WHO", "UNESCO"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "ssc_cgl_t1_geo_q1",
+            "q_en": "Longest river in India (commonly cited) is:",
+            "options_en": ["Ganga", "Yamuna", "Godavari", "Brahmaputra"],
+            "answer": 0
+          }
+        ]
+      }
+    },
+    "tier_2": {
+      "Paper-1": {
+        "Quantitative Ability Advance Level": [
+          {
+            "id": "ssc_cgl_t2_p1_quant_q1",
+            "q_en": "If 3x - 2 = 13, x = ?",
+            "options_en": ["3", "4", "5", "6"],
+            "answer": 2
+          }
+        ],
+        "Data Interpretation": [
+          {
+            "id": "ssc_cgl_t2_p1_di_q1",
+            "q_en": "If a pie chart shows 25% for A and total is 200, A's value is:",
+            "options_en": ["25", "50", "100", "150"],
+            "answer": 2
+          }
+        ],
+        "Problem Solving": [
+          {
+            "id": "ssc_cgl_t2_p1_ps_q1",
+            "q_en": "If 5 people take 4 days, how many days for 10 people (same productivity)?",
+            "options_en": ["1", "2", "3", "4"],
+            "answer": 1
+          }
+        ],
+        "Algebra & Geometry": [
+          {
+            "id": "ssc_cgl_t2_p1_ag_q1",
+            "q_en": "Area of triangle with base 10 and height 6 is:",
+            "options_en": ["30", "60", "16", "20"],
+            "answer": 0
+          }
+        ],
+        "Mensuration": [
+          {
+            "id": "ssc_cgl_t2_p1_mens_q1",
+            "q_en": "Volume of cube side 4 is:",
+            "options_en": ["16", "32", "64", "48"],
+            "answer": 2
+          }
+        ]
+      },
+      "Paper-2": {
+        "English Language & Comprehension": [
+          {
+            "id": "ssc_cgl_t2_p2_eng_q1",
+            "q_en": "Select correct sentence: 'He ____ exams tomorrow.'",
+            "options_en": ["appear", "appears", "will appear", "appeared"],
+            "answer": 2
+          }
+        ],
+        "Reading Comprehension": [
+          {
+            "id": "ssc_cgl_t2_p2_rc_q1",
+            "q_en": "Main purpose of a passage question tests:",
+            "options_en": ["Grammar", "Vocabulary", "Comprehension", "Pronunciation"],
+            "answer": 2
+          }
+        ],
+        "Error Spotting": [
+          {
+            "id": "ssc_cgl_t2_p2_err_q1",
+            "q_en": "Find error: 'They has finished the work.'",
+            "options_en": ["They", "has", "finished", "work"],
+            "answer": 1
+          }
+        ],
+        "Vocabulary": [
+          {
+            "id": "ssc_cgl_t2_p2_vocab_q1",
+            "q_en": "Antonym of 'increase' is:",
+            "options_en": ["Rise", "Grow", "Decline", "Expand"],
+            "answer": 2
+          }
+        ],
+        "Grammar": [
+          {
+            "id": "ssc_cgl_t2_p2_gram_q1",
+            "q_en": "Choose correct: 'I have ___ my homework.'",
+            "options_en": ["do", "did", "done", "doing"],
+            "answer": 2
+          }
+        ]
+      },
+      "Paper-3": {
+        "Statistics": [
+          {
+            "id": "ssc_cgl_t2_p3_stats_q1",
+            "q_en": "Mean of numbers 2,4,6,8 is:",
+            "options_en": ["4", "5", "6", "20"],
+            "answer": 1
+          }
+        ],
+        "Data Analysis": [
+          {
+            "id": "ssc_cgl_t2_p3_da_q1",
+            "q_en": "If total sales = 100 and A=40%, A's sales = ?",
+            "options_en": ["40", "50", "60", "70"],
+            "answer": 0
+          }
+        ],
+        "Probability": [
+          {
+            "id": "ssc_cgl_t2_p3_prob_q1",
+            "q_en": "Probability of getting head in coin toss is:",
+            "options_en": ["1/4", "1/3", "1/2", "1"],
+            "answer": 2
+          }
+        ],
+        "Mean, Median, Mode": [
+          {
+            "id": "ssc_cgl_t2_p3_mmm_q1",
+            "q_en": "Median of 1,3,5,7,9 is:",
+            "options_en": ["5", "4", "6", "3"],
+            "answer": 0
+          }
+        ]
+      },
+      "Paper-4": {
+        "General Studies (Finance & Economics)": [
+          {
+            "id": "ssc_cgl_t2_p4_gs_q1",
+            "q_en": "GDP measures:",
+            "options_en": ["Inflation", "National Income", "Population", "Employment"],
+            "answer": 1
+          }
+        ],
+        "Budgeting": [
+          {
+            "id": "ssc_cgl_t2_p4_budget_q1",
+            "q_en": "Budget allocates funds for:",
+            "options_en": ["Expenditure", "Elections", "Festivals", "Sports"],
+            "answer": 0
+          }
+        ],
+        "Banking Awareness": [
+          {
+            "id": "ssc_cgl_t2_p4_bank_q1",
+            "q_en": "Full form of NEFT is:",
+            "options_en": ["National Electronic Funds Transfer", "National Electronic Fast Transfer", "New Electronic Funds Transfer", "National Electronic Fund Transfer"],
+            "answer": 0
+          }
+        ],
+        "Economic Policies": [
+          {
+            "id": "ssc_cgl_t2_p4_policy_q1",
+            "q_en": "Monetary policy is managed by:",
+            "options_en": ["Government", "RBI", "Parliament", "Supreme Court"],
+            "answer": 1
+          }
+        ]
+      }
+    }
+  },
+  "ssc_chsl": {
+    "tier_1": {
+      "General-Intelligence": {
+        "Analogy": [
+          {
+            "id": "ssc_chsl_gi_analogy_q1",
+            "q_en": "Dog : Bark :: Cat : ?",
+            "options_en": ["Meow", "Roar", "Chirp", "Bleat"],
+            "answer": 0
+          }
+        ],
+        "Classification": [
+          {
+            "id": "ssc_chsl_gi_class_q1",
+            "q_en": "Odd one: Car, Bus, Train, Mango",
+            "options_en": ["Car", "Bus", "Train", "Mango"],
+            "answer": 3
+          }
+        ],
+        "Series": [
+          {
+            "id": "ssc_chsl_gi_series_q1",
+            "q_en": "3,6,9,? next is",
+            "options_en": ["10", "12", "15", "18"],
+            "answer": 1
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "ssc_chsl_gi_code_q1",
+            "q_en": "If A=1,B=2 then DOG = ? (sum)",
+            "options_en": ["26", "23", "28", "25"],
+            "answer": 0
+          }
+        ],
+        "Direction Sense": [
+          {
+            "id": "ssc_chsl_gi_dir_q1",
+            "q_en": "If you face North and turn right, you face:",
+            "options_en": ["East", "West", "South", "North"],
+            "answer": 0
+          }
+        ],
+        "Puzzle Test": [
+          {
+            "id": "ssc_chsl_gi_puzzle_q1",
+            "q_en": "If 5 people sit in a row, number of arrangements is:",
+            "options_en": ["60", "120", "24", "720"],
+            "answer": 0
+          }
+        ]
+      },
+      "Quantitative-Aptitude": {
+        "Arithmetic": [
+          {
+            "id": "ssc_chsl_qa_arith_q1",
+            "q_en": "15 × 4 = ?",
+            "options_en": ["45", "60", "75", "30"],
+            "answer": 1
+          }
+        ],
+        "Algebra": [
+          {
+            "id": "ssc_chsl_qa_alg_q1",
+            "q_en": "If 2x = 10, x = ?",
+            "options_en": ["2", "4", "5", "6"],
+            "answer": 2
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "ssc_chsl_qa_geo_q1",
+            "q_en": "Right angle is equal to:",
+            "options_en": ["45°", "90°", "180°", "360°"],
+            "answer": 1
+          }
+        ],
+        "Percentage": [
+          {
+            "id": "ssc_chsl_qa_perc_q1",
+            "q_en": "25% of 200 = ?",
+            "options_en": ["25", "50", "60", "40"],
+            "answer": 1
+          }
+        ],
+        "Ratio & Proportion": [
+          {
+            "id": "ssc_chsl_qa_ratio_q1",
+            "q_en": "If ratio 3:4 and sum 28, numbers are:",
+            "options_en": ["12,16", "9,19", "10,18", "14,14"],
+            "answer": 0
+          }
+        ]
+      },
+      "English": {
+        "Grammar": [
+          {
+            "id": "ssc_chsl_eng_gram_q1",
+            "q_en": "Choose correct: 'She ___ happy.'",
+            "options_en": ["is", "are", "am", "be"],
+            "answer": 0
+          }
+        ],
+        "Comprehension": [
+          {
+            "id": "ssc_chsl_eng_comp_q1",
+            "q_en": "Comprehension questions measure:",
+            "options_en": ["Grammar", "Understanding", "Spelling", "Pronunciation"],
+            "answer": 1
+          }
+        ],
+        "Error Detection": [
+          {
+            "id": "ssc_chsl_eng_err_q1",
+            "q_en": "Find error: 'He don't know.'",
+            "options_en": ["He", "don't", "know", "None"],
+            "answer": 1
+          }
+        ],
+        "Synonyms & Antonyms": [
+          {
+            "id": "ssc_chsl_eng_syn_q1",
+            "q_en": "Synonym of 'Happy' is:",
+            "options_en": ["Sad", "Glad", "Angry", "Tired"],
+            "answer": 1
+          }
+        ]
+      },
+      "General-Awareness": {
+        "History": [
+          {
+            "id": "ssc_chsl_ga_hist_q1",
+            "q_en": "Who led India to independence? (Prominent leader)",
+            "options_en": ["Gandhi", "Churchill", "Napoleon", "Lincoln"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "ssc_chsl_ga_geo_q1",
+            "q_en": "Capital of India is:",
+            "options_en": ["Mumbai", "New Delhi", "Kolkata", "Chennai"],
+            "answer": 1
+          }
+        ],
+        "Polity": [
+          {
+            "id": "ssc_chsl_ga_pol_q1",
+            "q_en": "Who is head of government in India?",
+            "options_en": ["President", "Prime Minister", "Governor", "Chief Minister"],
+            "answer": 1
+          }
+        ],
+        "Economy": [
+          {
+            "id": "ssc_chsl_ga_econ_q1",
+            "q_en": "GST stands for:",
+            "options_en": ["Goods and Services Tax", "General Sales Tax", "Great Service Tax", "Goods Sales Tariff"],
+            "answer": 0
+          }
+        ],
+        "Science": [
+          {
+            "id": "ssc_chsl_ga_sci_q1",
+            "q_en": "H2O is chemical formula for:",
+            "options_en": ["Oxygen", "Hydrogen", "Water", "Carbon Dioxide"],
+            "answer": 2
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "ssc_chsl_ga_curr_q1",
+            "q_en": "Major world health organization is:",
+            "options_en": ["UNICEF", "WHO", "IMF", "WTO"],
+            "answer": 1
+          }
+        ]
+      }
+    },
+    "tier_2": {
+      "Essay-Writing": {
+        "Formal Essays": [
+          {
+            "id": "ssc_chsl_t2_essay_formal_q1",
+            "q_en": "Write the main objective of formal essays question: (sample prompt)",
+            "options_en": ["Describe", "Narrate", "Explain", "All of the above"],
+            "answer": 3
+          }
+        ],
+        "Informal Essays": [
+          {
+            "id": "ssc_chsl_t2_essay_informal_q1",
+            "q_en": "Informal essay tone is usually:",
+            "options_en": ["Formal", "Colloquial", "Legal", "Technical"],
+            "answer": 1
+          }
+        ],
+        "Descriptive Writing": [
+          {
+            "id": "ssc_chsl_t2_essay_desc_q1",
+            "q_en": "Descriptive writing emphasizes:",
+            "options_en": ["Facts", "Details & imagery", "Equations", "Charts"],
+            "answer": 1
+          }
+        ]
+      },
+      "Letter/Application-Writing": {
+        "Formal Letter": [
+          {
+            "id": "ssc_chsl_t2_letter_formal_q1",
+            "q_en": "Formal letters usually begin with:",
+            "options_en": ["Dear Sir/Madam", "Hey", "Yo", "Hi buddy"],
+            "answer": 0
+          }
+        ],
+        "Application": [
+          {
+            "id": "ssc_chsl_t2_letter_app_q1",
+            "q_en": "An application to the principal should be:",
+            "options_en": ["Informal", "Formal", "Slang", "Poem"],
+            "answer": 1
+          }
+        ],
+        "Official Correspondence": [
+          {
+            "id": "ssc_chsl_t2_letter_off_q1",
+            "q_en": "Official correspondence must be:",
+            "options_en": ["Casual", "Concise & formal", "Ambiguous", "Verbose only"],
+            "answer": 1
+          }
+        ]
+      }
+    }
+  },
+  "ssc_gd": {
+    "exam": {
+      "General-Intelligence-&-Reasoning": {
+        "Analogy": [
+          {
+            "id": "ssc_gd_gen_analogy_q1",
+            "q_en": "Knife : Cut :: Pen : ?",
+            "options_en": ["Write", "Read", "Draw", "Erase"],
+            "answer": 0
+          }
+        ],
+        "Classification": [
+          {
+            "id": "ssc_gd_gen_class_q1",
+            "q_en": "Odd one: Oak, Pine, Rose, Maple",
+            "options_en": ["Oak", "Pine", "Rose", "Maple"],
+            "answer": 2
+          }
+        ],
+        "Series": [
+          {
+            "id": "ssc_gd_gen_series_q1",
+            "q_en": "2,5,10,17,26 next is:",
+            "options_en": ["35", "37", "38", "40"],
+            "answer": 1
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "ssc_gd_gen_code_q1",
+            "q_en": "If A=1 then CAT = ? (C+A+T)",
+            "options_en": ["24", "26", "30", "20"],
+            "answer": 1
+          }
+        ]
+      },
+      "General-Knowledge": {
+        "History": [
+          {
+            "id": "ssc_gd_gk_hist_q1",
+            "q_en": "Who founded the Mauryan Empire?",
+            "options_en": ["Ashoka", "Chandragupta Maurya", "Bindusara", "Bimbisara"],
+            "answer": 1
+          }
+        ],
+        "Geography": [
+          {
+            "id": "ssc_gd_gk_geo_q1",
+            "q_en": "Largest continent is:",
+            "options_en": ["Africa", "Asia", "Europe", "Antarctica"],
+            "answer": 1
+          }
+        ],
+        "Polity": [
+          {
+            "id": "ssc_gd_gk_pol_q1",
+            "q_en": "Fundamental duties are in which article?",
+            "options_en": ["Article 32", "Article 51A", "Article 19", "Article 21"],
+            "answer": 1
+          }
+        ],
+        "Economy": [
+          {
+            "id": "ssc_gd_gk_econ_q1",
+            "q_en": "Currency of India is called:",
+            "options_en": ["Rupee", "Dollar", "Euro", "Pound"],
+            "answer": 0
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "ssc_gd_gk_curr_q1",
+            "q_en": "Major global organization for health is:",
+            "options_en": ["WHO", "IMF", "WTO", "UNESCO"],
+            "answer": 0
+          }
+        ]
+      },
+      "Elementary-Mathematics": {
+        "Arithmetic": [
+          {
+            "id": "ssc_gd_em_arith_q1",
+            "q_en": "12 + 15 = ?",
+            "options_en": ["25", "26", "27", "28"],
+            "answer": 2
+          }
+        ],
+        "Algebra": [
+          {
+            "id": "ssc_gd_em_alg_q1",
+            "q_en": "If x + 5 = 12 then x = ?",
+            "options_en": ["5", "6", "7", "8"],
+            "answer": 2
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "ssc_gd_em_geo_q1",
+            "q_en": "Triangle interior sum is:",
+            "options_en": ["180°", "360°", "90°", "270°"],
+            "answer": 0
+          }
+        ],
+        "Mensuration": [
+          {
+            "id": "ssc_gd_em_mens_q1",
+            "q_en": "Area of square side 5 = ?",
+            "options_en": ["10", "20", "25", "30"],
+            "answer": 2
+          }
+        ]
+      },
+      "English/Hindi": {
+        "Grammar": [
+          {
+            "id": "ssc_gd_lang_gram_q1",
+            "q_en": "Choose correct: 'They ____ arrived.'",
+            "options_en": ["has", "have", "is", "are"],
+            "answer": 1
+          }
+        ],
+        "Comprehension": [
+          {
+            "id": "ssc_gd_lang_comp_q1",
+            "q_en": "Comprehension question usually asks for:",
+            "options_en": ["Summary", "Grammar", "Spelling", "Punctuation"],
+            "answer": 0
+          }
+        ],
+        "Error Detection": [
+          {
+            "id": "ssc_gd_lang_err_q1",
+            "q_en": "Find error: 'He don't like it.'",
+            "options_en": ["He", "don't", "like", "it"],
+            "answer": 1
+          }
+        ]
+      }
+    }
+  },
+  "rrb_ntpc": {
+    "stage_1": {
+      "Mathematics": {
+        "Arithmetic": [
+          {
+            "id": "rrb_ntpc_s1_arith_q1",
+            "q_en": "LCM of 6 and 15 is:",
+            "options_en": ["30", "15", "60", "45"],
+            "answer": 0
+          }
+        ],
+        "Algebra": [
+          {
+            "id": "rrb_ntpc_s1_alg_q1",
+            "q_en": "If 2x = 10, x = ?",
+            "options_en": ["2", "4", "5", "6"],
+            "answer": 2
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "rrb_ntpc_s1_geo_q1",
+            "q_en": "Right triangle has one angle 90°, other two sum to:",
+            "options_en": ["90°", "180°", "45°", "60°"],
+            "answer": 0
+          }
+        ],
+        "Mensuration": [
+          {
+            "id": "rrb_ntpc_s1_mens_q1",
+            "q_en": "Area of circle radius 7 (πr^2) approx:",
+            "options_en": ["154π", "49π", "14π", "7π"],
+            "answer": 1
+          }
+        ],
+        "Trigonometry": [
+          {
+            "id": "rrb_ntpc_s1_trig_q1",
+            "q_en": "sin 90° = ?",
+            "options_en": ["0", "1", "1/2", "√2/2"],
+            "answer": 1
+          }
+        ]
+      },
+      "General-Intelligence": {
+        "Analogy": [
+          {
+            "id": "rrb_ntpc_s1_analogy_q1",
+            "q_en": "Hot : Cold :: High : ?",
+            "options_en": ["Low", "Tall", "Warm", "Cool"],
+            "answer": 0
+          }
+        ],
+        "Classification": [
+          {
+            "id": "rrb_ntpc_s1_class_q1",
+            "q_en": "Odd one: Pen, Pencil, Eraser, Ruler",
+            "options_en": ["Pen", "Pencil", "Eraser", "Ruler"],
+            "answer": 2
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "rrb_ntpc_s1_code_q1",
+            "q_en": "If 1=A,2=B then 3=C; DOG=? (sum mapping) simple question",
+            "options_en": ["23", "26", "28", "20"],
+            "answer": 1
+          }
+        ],
+        "Series": [
+          {
+            "id": "rrb_ntpc_s1_series_q1",
+            "q_en": "Find next: 5,10,20,40,?",
+            "options_en": ["60", "80", "90", "100"],
+            "answer": 1
+          }
+        ]
+      },
+      "General-Awareness": {
+        "History": [
+          {
+            "id": "rrb_ntpc_s1_hist_q1",
+            "q_en": "India gained independence in which year?",
+            "options_en": ["1947", "1950", "1930", "1942"],
+            "answer": 0
+          }
+        ],
+        "Polity": [
+          {
+            "id": "rrb_ntpc_s1_pol_q1",
+            "q_en": "Who is the head of state of India?",
+            "options_en": ["President", "Prime Minister", "Governor", "Chief Justice"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "rrb_ntpc_s1_geo_q1",
+            "q_en": "Capital of Maharashtra is:",
+            "options_en": ["Mumbai", "Pune", "Nagpur", "Nashik"],
+            "answer": 0
+          }
+        ],
+        "Science": [
+          {
+            "id": "rrb_ntpc_s1_sci_q1",
+            "q_en": "H2O is formula for:",
+            "options_en": ["Water", "Hydrogen", "Oxygen", "Carbon dioxide"],
+            "answer": 0
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "rrb_ntpc_s1_curr_q1",
+            "q_en": "The UN headquarters is in which city?",
+            "options_en": ["New York", "Geneva", "Paris", "London"],
+            "answer": 0
+          }
+        ]
+      }
+    },
+    "stage_2": {
+      "Advanced-Maths": {
+        "Algebra": [
+          {
+            "id": "rrb_ntpc_s2_alg_q1",
+            "q_en": "Solve: x^2 - 4 = 0, x = ?",
+            "options_en": ["2 or -2", "4 or -4", "0", "1 or -1"],
+            "answer": 0
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "rrb_ntpc_s2_geo_q1",
+            "q_en": "Interior angles of triangle sum to:",
+            "options_en": ["180°", "360°", "90°", "270°"],
+            "answer": 0
+          }
+        ],
+        "Trigonometry": [
+          {
+            "id": "rrb_ntpc_s2_trig_q1",
+            "q_en": "tan45° equals:",
+            "options_en": ["0", "1", "∞", "√2"],
+            "answer": 1
+          }
+        ],
+        "Probability": [
+          {
+            "id": "rrb_ntpc_s2_prob_q1",
+            "q_en": "Probability of rolling an even number on a fair die:",
+            "options_en": ["1/6", "1/2", "1/3", "2/3"],
+            "answer": 1
+          }
+        ],
+        "Statistics": [
+          {
+            "id": "rrb_ntpc_s2_stats_q1",
+            "q_en": "Mean of 2,4,6,8 is:",
+            "options_en": ["4", "5", "6", "20"],
+            "answer": 1
+          }
+        ]
+      },
+      "Reasoning-&-Intelligence": {
+        "Logical Reasoning": [
+          {
+            "id": "rrb_ntpc_s2_logic_q1",
+            "q_en": "If all A are B and all B are C then all A are C? (Y/N)",
+            "options_en": ["Yes", "No", "Sometimes", "Cannot say"],
+            "answer": 0
+          }
+        ],
+        "Puzzles": [
+          {
+            "id": "rrb_ntpc_s2_puzzle_q1",
+            "q_en": "If 4 people sit around a table, number of seating arrangements (circular) is:",
+            "options_en": ["24", "6", "4", "12"],
+            "answer": 1
+          }
+        ],
+        "Syllogism": [
+          {
+            "id": "rrb_ntpc_s2_syll_q1",
+            "q_en": "All cats are animals. All animals are mortal. Therefore cats are mortal? (Y/N)",
+            "options_en": ["Yes", "No", "Can't determine", "Only some cats"],
+            "answer": 0
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "rrb_ntpc_s2_code_q1",
+            "q_en": "If X→Y, Y→Z, then X→? (transitive mapping example)",
+            "options_en": ["Z", "X", "Y", "None"],
+            "answer": 0
+          }
+        ]
+      },
+      "General-Awareness": {
+        "Railway Awareness": [
+          {
+            "id": "rrb_ntpc_s2_rail_q1",
+            "q_en": "Which organization runs Indian Railways?",
+            "options_en": ["Ministry of Railways", "Ministry of Transport", "RBI", "NPCI"],
+            "answer": 0
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "rrb_ntpc_s2_curr_q1",
+            "q_en": "Which body declares the national budget in India?",
+            "options_en": ["Finance Minister", "Prime Minister", "President", "RBI Governor"],
+            "answer": 0
+          }
+        ],
+        "Economy": [
+          {
+            "id": "rrb_ntpc_s2_econ_q1",
+            "q_en": "Inflation generally indicates:",
+            "options_en": ["Rising prices", "Falling prices", "No change", "High growth only"],
+            "answer": 0
+          }
+        ],
+        "Science": [
+          {
+            "id": "rrb_ntpc_s2_sci_q1",
+            "q_en": "Photosynthesis produces which gas?",
+            "options_en": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+            "answer": 0
+          }
+        ]
+      }
+    }
+  },
+  "rrb_group_d": {
+    "exam": {
+      "Mathematics": {
+        "Arithmetic": [
+          {
+            "id": "rrb_gd_math_arith_q1",
+            "q_en": "10% of 250 is:",
+            "options_en": ["25", "20", "10", "50"],
+            "answer": 0
+          }
+        ],
+        "Algebra": [
+          {
+            "id": "rrb_gd_math_alg_q1",
+            "q_en": "If x+3=10 then x = ?",
+            "options_en": ["6", "7", "8", "9"],
+            "answer": 1
+          }
+        ],
+        "Geometry": [
+          {
+            "id": "rrb_gd_math_geo_q1",
+            "q_en": "A straight angle is:",
+            "options_en": ["90°", "180°", "360°", "270°"],
+            "answer": 1
+          }
+        ],
+        "Mensuration": [
+          {
+            "id": "rrb_gd_math_mens_q1",
+            "q_en": "Perimeter of square side 5 is:",
+            "options_en": ["20", "25", "10", "15"],
+            "answer": 0
+          }
+        ]
+      },
+      "General-Awareness": {
+        "History": [
+          {
+            "id": "rrb_gd_ga_hist_q1",
+            "q_en": "Who was a freedom fighter in India?",
+            "options_en": ["Netaji Subhas Chandra Bose", "Napoleon", "Churchill", "Lincoln"],
+            "answer": 0
+          }
+        ],
+        "Polity": [
+          {
+            "id": "rrb_gd_ga_pol_q1",
+            "q_en": "Who appoints the Chief Justice of India?",
+            "options_en": ["President", "Prime Minister", "Parliament", "RBI Governor"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "rrb_gd_ga_geo_q1",
+            "q_en": "Which is the largest state by area in India?",
+            "options_en": ["Rajasthan", "Maharashtra", "Madhya Pradesh", "Uttar Pradesh"],
+            "answer": 0
+          }
+        ],
+        "Science": [
+          {
+            "id": "rrb_gd_ga_sci_q1",
+            "q_en": "The chemical symbol of water is:",
+            "options_en": ["H2O", "O2", "CO2", "HO2"],
+            "answer": 0
+          }
+        ],
+        "Current Affairs": [
+          {
+            "id": "rrb_gd_ga_curr_q1",
+            "q_en": "Which global body addresses climate change?",
+            "options_en": ["UNFCCC", "WHO", "IMF", "WTO"],
+            "answer": 0
+          }
+        ]
+      },
+      "Reasoning-&-Intelligence": {
+        "Analogy": [
+          {
+            "id": "rrb_gd_reason_analogy_q1",
+            "q_en": "Tree : Forest :: House : ?",
+            "options_en": ["Village", "City", "Building", "Room"],
+            "answer": 0
+          }
+        ],
+        "Series": [
+          {
+            "id": "rrb_gd_reason_series_q1",
+            "q_en": "Series: 1,1,2,3,5,? next is",
+            "options_en": ["6", "7", "8", "5"],
+            "answer": 1
+          }
+        ],
+        "Classification": [
+          {
+            "id": "rrb_gd_reason_class_q1",
+            "q_en": "Odd one: Lion, Tiger, Dog, Cat",
+            "options_en": ["Lion", "Tiger", "Dog", "Cat"],
+            "answer": 0
+          }
+        ],
+        "Coding-Decoding": [
+          {
+            "id": "rrb_gd_reason_code_q1",
+            "q_en": "If A=Z, B=Y then mapping is:",
+            "options_en": ["Reverse alphabet", "Same", "Shift by 1", "Random"],
+            "answer": 0
+          }
+        ]
+      },
+      "General-Science": {
+        "Physics": [
+          {
+            "id": "rrb_gd_sci_phys_q1",
+            "q_en": "SI unit of force is:",
+            "options_en": ["Newton", "Joule", "Watt", "Pascal"],
+            "answer": 0
+          }
+        ],
+        "Chemistry": [
+          {
+            "id": "rrb_gd_sci_chem_q1",
+            "q_en": "pH value less than 7 indicates:",
+            "options_en": ["Acidic", "Basic", "Neutral", "Alkaline"],
+            "answer": 0
+          }
+        ],
+        "Biology": [
+          {
+            "id": "rrb_gd_sci_bio_q1",
+            "q_en": "Plants make food by:",
+            "options_en": ["Photosynthesis", "Respiration", "Digestion", "Excretion"],
+            "answer": 0
+          }
+        ]
+      }
+    }
+  },
+  "upsc_cse": {
+    "prelims": {
+      "GS-Paper-1": {
+        "History": [
+          {
+            "id": "upsc_pre_hist_q1",
+            "q_en": "Who founded the Mauryan Empire?",
+            "options_en": ["Chandragupta Maurya", "Ashoka", "Bindusara", "Bimbisara"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "upsc_pre_geo_q1",
+            "q_en": "Largest desert of India is:",
+            "options_en": ["Thar", "Gobi", "Sahara", "Kalahari"],
+            "answer": 0
+          }
+        ],
+        "Polity": [
+          {
+            "id": "upsc_pre_pol_q1",
+            "q_en": "Article 14 guarantees:",
+            "options_en": ["Equality before law", "Freedom of speech", "Right to property", "Directive Principles"],
+            "answer": 0
+          }
+        ],
+        "Economy": [
+          {
+            "id": "upsc_pre_econ_q1",
+            "q_en": "GDP stands for:",
+            "options_en": ["Gross Domestic Product", "General Domestic Product", "Gross Domestic Price", "Global Domestic Product"],
+            "answer": 0
+          }
+        ],
+        "Environment": [
+          {
+            "id": "upsc_pre_env_q1",
+            "q_en": "Which gas is major greenhouse gas?",
+            "options_en": ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"],
+            "answer": 0
+          }
+        ]
+      },
+      "CSAT": {
+        "Maths": [
+          {
+            "id": "upsc_csat_math_q1",
+            "q_en": "Average of 5,7,9 is:",
+            "options_en": ["7", "8", "9", "6"],
+            "answer": 0
+          }
+        ],
+        "Reasoning": [
+          {
+            "id": "upsc_csat_reason_q1",
+            "q_en": "If all A are B and some B are C, can some A be C? (Possible?)",
+            "options_en": ["Yes", "No", "Always", "Never"],
+            "answer": 0
+          }
+        ],
+        "Comprehension": [
+          {
+            "id": "upsc_csat_comp_q1",
+            "q_en": "Comprehension tests ability to:",
+            "options_en": ["Understand passages", "Spell words", "Translate", "Recite"],
+            "answer": 0
+          }
+        ]
+      }
+    },
+    "mains": {
+      "Essay": {
+        "Essay Writing": [
+          {
+            "id": "upsc_mains_essay_q1",
+            "q_en": "An essay prompt asks to discuss 'Digital India' — best approach is to:",
+            "options_en": ["Describe program", "Analyze impacts", "Offer suggestions", "All of the above"],
+            "answer": 3
+          }
+        ],
+        "Argumentative Writing": [
+          {
+            "id": "upsc_mains_arg_q1",
+            "q_en": "Argumentative essays require:",
+            "options_en": ["Evidence", "Opinion only", "Examples only", "Poetry"],
+            "answer": 0
+          }
+        ]
+      },
+      "GS-Paper-1": {
+        "Indian Heritage & Culture": [
+          {
+            "id": "upsc_m1_culture_q1",
+            "q_en": "Which dance form is from Kerala?",
+            "options_en": ["Kathakali", "Bharatanatyam", "Odissi", "Kathak"],
+            "answer": 0
+          }
+        ],
+        "History": [
+          {
+            "id": "upsc_m1_hist_q1",
+            "q_en": "The Quit India Movement began in which year?",
+            "options_en": ["1942", "1947", "1930", "1919"],
+            "answer": 0
+          }
+        ],
+        "Geography": [
+          {
+            "id": "upsc_m1_geo_q1",
+            "q_en": "Which mountain range runs across northern India?",
+            "options_en": ["Himalayas", "Aravalli", "Vindhya", "Satpura"],
+            "answer": 0
+          }
+        ]
+      },
+      "GS-Paper-2": {
+        "Governance": [
+          {
+            "id": "upsc_m2_gov_q1",
+            "q_en": "Who heads the executive in India?",
+            "options_en": ["Prime Minister", "President", "Chief Justice", "Home Minister"],
+            "answer": 0
+          }
+        ],
+        "Constitution": [
+          {
+            "id": "upsc_m2_const_q1",
+            "q_en": "The Constitution of India was adopted in which year?",
+            "options_en": ["1950", "1949", "1947", "1952"],
+            "answer": 1
+          }
+        ],
+        "Polity": [
+          {
+            "id": "upsc_m2_pol_q1",
+            "q_en": "Directive Principles are mentioned in which part of the Constitution?",
+            "options_en": ["Part IV", "Part III", "Part V", "Part II"],
+            "answer": 0
+          }
+        ]
+      },
+      "GS-Paper-3": {
+        "Economy": [
+          {
+            "id": "upsc_m3_econ_q1",
+            "q_en": "Inflation control is a function of which policy?",
+            "options_en": ["Monetary policy", "Fiscal policy", "Trade policy", "Industrial policy"],
+            "answer": 0
+          }
+        ],
+        "Security": [
+          {
+            "id": "upsc_m3_sec_q1",
+            "q_en": "Which is responsible for internal security?",
+            "options_en": ["Home Ministry", "RBI", "Finance Ministry", "Education Ministry"],
+            "answer": 0
+          }
+        ],
+        "Science & Technology": [
+          {
+            "id": "upsc_m3_sci_q1",
+            "q_en": "DNA stands for:",
+            "options_en": ["Deoxyribonucleic Acid", "Deoxyribonitric Acid", "Deoxyribonucleic Alloy", "None"],
+            "answer": 0
+          }
+        ]
+      },
+      "GS-Paper-4": {
+        "Ethics": [
+          {
+            "id": "upsc_m4_ethics_q1",
+            "q_en": "Ethics in public life emphasizes:",
+            "options_en": ["Integrity", "Corruption", "Nepotism", "Selfishness"],
+            "answer": 0
+          }
+        ],
+        "Integrity": [
+          {
+            "id": "upsc_m4_int_q1",
+            "q_en": "Integrity is best described as:",
+            "options_en": ["Honesty", "Wealth", "Power", "Fame"],
+            "answer": 0
+          }
+        ],
+        "Aptitude": [
+          {
+            "id": "upsc_m4_apt_q1",
+            "q_en": "Aptitude tests usually evaluate:",
+            "options_en": ["Problem solving", "Singing", "Painting", "Dancing"],
+            "answer": 0
+          }
+        ]
+      },
+      "Optional-Paper-1": {
+        "Subject Specific Chapters": [
+          {
+            "id": "upsc_opt1_q1",
+            "q_en": "Optional subject question placeholder — depends on subject chosen.",
+            "options_en": ["A", "B", "C", "D"],
+            "answer": 0
+          }
+        ]
+      },
+      "Optional-Paper-2": {
+        "Subject Specific Chapters": [
+          {
+            "id": "upsc_opt2_q1",
+            "q_en": "Optional subject 2 placeholder question.",
+            "options_en": ["A", "B", "C", "D"],
+            "answer": 0
+          }
+        ]
+      }
+    }
+  }
+}

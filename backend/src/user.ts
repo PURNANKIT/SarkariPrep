@@ -1,65 +1,166 @@
-import express from 'express';
-import bcrypt from 'bcrypt';
-import pool from './db';
+import express from "express";
+import jwt from "jsonwebtoken";
+import type { SignOptions } from "jsonwebtoken";
+import bcrypt from "bcrypt";
+import pool from "./db.js";
+import { sendVerificationEmail } from "./routes/emailServices.js";
+import { randomBytes } from "crypto";
 
 const router = express.Router();
 
-// Debug middleware
-router.use((req, res, next) => {
-  console.log('Router hit:', req.method, req.path);
-  next();
-});
-
-// Signup
-router.post('/signup', async (req, res) => {
-  const { full_name, email, mobile, job_preparation, preparation_year, password } = req.body;
-
-  if (!full_name || !email || !mobile || !job_preparation || !preparation_year || !password) {
-    return res.status(400).json({ msg: "All fields are required" });
-  }
-
+// ---------------------- SIGNUP ----------------------
+router.post("/signup", async (req, res) => {
   try {
-    const existUsers = await pool.query(
-      "SELECT email, mobile FROM users WHERE email = $1 OR mobile = $2",
-      [email, mobile]
-    );
+    const {
+      full_name,
+      email,
+      mobile,
+      job_preparation,
+      preparation_year,
+      password
+    } = req.body;
 
-    if (existUsers.rows.length > 0) {
-      const user = existUsers.rows[0];
-      if (user.email === email) return res.status(400).json({ msg: "Email already registered" });
-      if (user.mobile === mobile) return res.status(400).json({ msg: "Mobile already registered" });
+    if (!full_name || !email || !mobile || !job_preparation || !preparation_year || !password) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const userExists = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+    if (userExists.rows.length > 0) {
+      return res.status(409).json({ message: "Email already exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    await pool.query(
-      "INSERT INTO users (full_name, email, mobile, job_preparation, preparation_year, password) VALUES ($1, $2, $3, $4, $5, $6)",
-      [full_name, email, mobile, job_preparation, preparation_year, hashedPassword]
+
+    // Generate email verification token
+    const verificationToken = randomBytes(40).toString("hex");
+    const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+
+    // Insert user
+    const newUser = await pool.query(
+      `INSERT INTO users 
+       (full_name, email, mobile, job_preparation, preparation_year, password, verification_token, verification_expires, is_verified)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,false)
+       RETURNING id, full_name, email`,
+      [
+        full_name,
+        email,
+        mobile,
+        job_preparation,
+        preparation_year,
+        hashedPassword,
+        verificationToken,
+        expiresAt
+      ]
     );
 
-    return res.status(201).json({ msg: "User registered successfully" });
-  } catch (err: any) {
-    console.error("Registration error:", err);
-    return res.status(500).json({ msg: "Server error, please try again later" });
+    const user = newUser.rows[0];
+
+    // Send verification email
+    await sendVerificationEmail(email, verificationToken);
+
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_SECRET as string,
+      { expiresIn: process.env.JWT_EXPIRES_IN as string } as SignOptions
+    );
+
+    return res.status(201).json({
+      message: "Signup successful. Please verify your email.",
+      token,
+      user
+    });
+
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Server error" });
   }
 });
 
-// Login
-router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-
-  if (!email || !password) return res.status(400).json({ msg: "Email and password are required" });
-
+// ---------------------- LOGIN ----------------------
+router.post("/login", async (req, res) => {
   try {
-    const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
-    if (user.rows.length === 0) return res.status(400).json({ msg: "Invalid Credentials" });
+    const { email, password } = req.body;
 
-    const validPassword = await bcrypt.compare(password, user.rows[0].password);
-    if (!validPassword) return res.status(400).json({ msg: "Invalid Credentials" });
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email and password required" });
+    }
 
-    return res.status(200).json({ msg: "Login Successful" });
-  } catch (err: any) {
-    console.error("Login error:", err);
-    return res.status(500).json({ msg: "Server error, please try again later" });
+    const userResult = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+    if (userResult.rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const user = userResult.rows[0];
+
+    // Check email verification
+    if (!user.is_verified) {
+      return res.status(403).json({ message: "Please verify your email first." });
+    }
+
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      return res.status(401).json({ message: "Invalid password" });
+    }
+
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_SECRET as string,
+      { expiresIn: process.env.JWT_EXPIRES_IN as string } as SignOptions
+    );
+
+    return res.json({
+      message: "Login successful",
+      token,
+      user
+    });
+
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Server error" });
+  }
+});
+
+// ---------------------- VERIFY EMAIL ----------------------
+router.get("/verify-email", async (req, res) => {
+  try {
+    const { token } = req.query;
+
+    if (!token) {
+      return res.status(400).json({ message: "Token missing" });
+    }
+
+    const result = await pool.query(
+      "SELECT * FROM users WHERE verification_token = $1",
+      [token]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(400).json({ message: "Invalid token" });
+    }
+
+    const user = result.rows[0];
+
+    // Check expiration
+    if (new Date() > new Date(user.verification_expires)) {
+      return res.status(400).json({ message: "Token expired" });
+    }
+
+    // Update user as verified
+    await pool.query(
+      `UPDATE users 
+       SET is_verified = true, verification_token = NULL, verification_expires = NULL 
+       WHERE id = $1`,
+      [user.id]
+    );
+
+    return res.send(`
+      <h1>Email Verified Successfully 🎉</h1>
+      <p>You can now login.</p>
+    `);
+
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Server error" });
   }
 });
 

@@ -39,18 +39,6 @@ const Header = () => {
               <h3>{timeLeft}</h3>
               <p>Next Quiz Starts In</p>
             </div>
-            <div className="stat">
-              <h3>1,254+</h3>
-              <p>Active Players</p>
-            </div>
-            <div className="stat">
-              <h3>5</h3>
-              <p>Your Rank</p>
-            </div>
-            <div className="stat">
-              <h3>Week 2 - November</h3>
-              <p>Current Topic</p>
-            </div>
           </div>
 
           <button className="btn join">Join Quiz</button>

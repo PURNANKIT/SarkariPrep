@@ -1,34 +1,34 @@
+// src/App.jsx
 import React from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
-import Home from "./component/pages/Home";
 import Header from "./component/Header";
-import ExamSelect from "./component/ExamSelect";
-import PracticeSection from "./component/PracticeSection";
-import Footer from "./component/Footer";
-import AskAIButton from "./component/AskAIButton";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Signup from "./component/pages/Signup";
+import { UserProvider } from "./component/context/UserContext";
+import Dashboard from "./component/Dashboard/Dashboard";
+import QuizPage from "./component/Quiz/QuizPage";
+import Practice from "./component/Practice/Practice";
+import Syllabus from "./component/Syllabus/Syllabus";
+import SyllabusQuestions from "./component/pages/SyllabusQuestions";
 
-function App() {
+export default function App() {
   return (
-    
-    <BrowserRouter>
-    <Navbar/>
-    
-    <Routes>
-      {/* <Route path="/" element={<Home/>}/> */}
-      <Route path="/signup" element={<Signup/>}/>
-    </Routes>
-    <Header/>
-    <ExamSelect/>
-    <PracticeSection/>
-    <Footer/>
-    <AskAIButton/>
-    </BrowserRouter>
-
-    
+    <UserProvider>
+      <BrowserRouter>
+        <Navbar />
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/quiz/:job" element={<QuizPage />} />
+          <Route path="/practice/:job" element={<Practice/>}/>
+          <Route path="/syllabus/:job" element={<Syllabus/>}/>
+          <Route path="/question/:id" element={<SyllabusQuestions/>} />
+          {/* <Route path="*" element={<Navigate to="/dashboard" replace />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
-
-export default App;

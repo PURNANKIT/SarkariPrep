@@ -1,12 +1,6 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './app'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
 
-
-// If you're using React Router
-// import { BrowserRouter } from 'react-router-dom'
-
-createRoot(document.getElementById('root')).render(
- 
-      <App/>
-)
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);

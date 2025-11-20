@@ -1,152 +1,71 @@
-/* 🔷 Header Background */
+/* Sits right under your navbar */
 .header {
   width: 100%;
-  min-height: 300px;
+  background: linear-gradient(135deg, #eef3ff 0%, #e9f6ff 40%, #f7ecff 100%);
+  margin-top: 20px;
   position: relative;
-  background: linear-gradient(120deg, #1a0033, #0d004f, #21007a);
-  background-size: 300% 300%;
-  animation: gradientMove 6s ease infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
   overflow: hidden;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* soft glow accents (optional) */
+.header::before,
+.header::after {
+  content: "";
+  position: absolute;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: .35; pointer-events: none;
 }
+/* .header::before { top: -80px; left: -80px; background: #7aa7ff; }
+.header::after { bottom: -100px; right: -60px; background: #ff90e8; } */
 
-/* 🔹 Overlay for better contrast */
-.header-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 0, 30, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
+.header-overlay { padding: 0 18px; }
 
-/* 🔸 Content */
 .header-content {
-  text-align: center;
-  max-width: 900px;
-  animation: fadeIn 1s ease;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 18px 60px rgba(21,34,66,.12);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Title */
 .header-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #ffd700;
-  text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
-  margin-bottom: 10px;
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  color: #1c2a43;
 }
+.header-subtitle { margin: 0; color: #5a6a82; }
+.header-subtitle span { color: #0b66ff; font-weight: 700; }
 
-/* Subtitle */
-.header-subtitle {
-  color: #eee;
-  font-size: 1.05rem;
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-
-.header-subtitle span {
-  color: #ffd700;
-  font-weight: 600;
-}
-
-/* 🔸 Stats */
-.quiz-stats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 25px;
-}
-
+.quiz-stats { margin: 18px 0 10px; }
 .stat {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  padding: 15px 20px;
-  border-radius: 10px;
-  width: 180px;
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  display: inline-block;
+  background: #f4f7ff;
+  border: 1px solid #e6ecff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 230px;
+  box-shadow: 0 6px 20px rgba(15,51,101,.06);
 }
+.stat h3 { margin: 0 0 6px; font-size: 1.5rem; color: #0b2c6a; }
+.stat p { margin: 0; font-size: .92rem; color: #5a6a82; }
 
-.stat:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-}
-
-.stat h3 {
-  font-size: 1.4rem;
-  color: #ffd700;
-  margin-bottom: 5px;
-}
-
-.stat p {
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-/* 🔘 Join Button */
 .btn.join {
-  background-color: #ffd700;
-  color: #1a1a40;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  margin-top: 12px;
+  background: linear-gradient(135deg, #0b66ff, #0047cb);
+  color:#fff; border:none; border-radius:12px;
+  padding: 10px 18px; font-weight:600; cursor:pointer;
+  box-shadow: 0 10px 24px rgba(11,102,255,.28);
+  transition: transform .12s ease, box-shadow .18s ease;
 }
+.btn.join:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(11,102,255,.35); }
 
-.btn.join:hover {
-  background-color: #fff;
-  color: #1a1a40;
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-}
-
-/* 💡 Mobile Responsive */
 @media (max-width: 768px) {
-  .header {
-    padding: 50px 10px;
-    min-height: auto;
-  }
-
-  .header-title {
-    font-size: 1.7rem;
-  }
-
-  .header-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-  }
-
-  .quiz-stats {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stat {
-    width: 90%;
-  }
-
-  .btn.join {
-    width: 80%;
-    padding: 12px;
-  }
+  .header { padding: 24px 0; margin-bottom: 22px; }
+  .header-content { padding: 22px 18px; }
+  .header-title { font-size: 1.5rem; }
+  .stat { min-width: 200px; }
 }
