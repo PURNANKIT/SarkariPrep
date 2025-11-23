@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import type { SignOptions } from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import pool from "./db.js";
-import { sendVerificationEmail } from "./routes/emailServices.js";
+import { sendVerificationEmail, sendResetPasswordEmail } from "./routes/emailServices.js";
 import { randomBytes } from "crypto";
 
 const router = express.Router();
@@ -163,5 +163,123 @@ router.get("/verify-email", async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 });
+
+
+// ---------------------- FORGOT PASSWORD ----------------------
+router.post("/forgot-password", async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    if (!email) return res.status(400).json({ message: "Email is required" });
+
+    const result = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const resetToken = randomBytes(40).toString("hex");
+    const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+
+    await pool.query(
+      `UPDATE users SET reset_password_token=$1, reset_password_expires=$2 WHERE email=$3`,
+      [resetToken, expiresAt, email]
+    );
+    // const resetLink = `https://informational-paxton-unliquidated.ngrok-free.dev/reset-password/${resetToken}`;
+    // const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+    // https://slimy-swans-say.loca.lt
+    const resetLink = `http://192.168.1.43:5173/${resetToken}`;
+
+
+
+    await sendResetPasswordEmail(email, resetLink);
+
+    return res.json({ message: "Reset link sent to your email" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+// ---------------------- RESET PASSWORD ----------------------
+router.post("/reset-password", async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+
+    if (!token || !newPassword)
+      return res.status(400).json({ message: "Missing token or password" });
+
+    const result = await pool.query(
+      "SELECT * FROM users WHERE reset_password_token = $1",
+      [token]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(400).json({ message: "Invalid token" });
+    }
+
+    const user = result.rows[0];
+
+    if (new Date() > new Date(user.reset_password_expires)) {
+      return res.status(400).json({ message: "Token expired" });
+    }
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    await pool.query(
+      `UPDATE users SET password=$1, reset_password_token=NULL, reset_password_expires=NULL WHERE id=$2`,
+      [hashedPassword, user.id]
+    );
+
+    return res.json({ message: "Password reset successful" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// Reset password POST route
+router.post("/reset-password/:token", async (req, res) => {
+  try {
+    const { token } = req.params;
+    const { password, confirmPassword } = req.body;
+
+    if (!password || !confirmPassword)
+      return res.status(400).json({ message: "All fields are required" });
+
+    if (password !== confirmPassword)
+      return res.status(400).json({ message: "Passwords do not match" });
+
+    const result = await pool.query(
+      "SELECT * FROM users WHERE reset_password_token = $1",
+      [token]
+    );
+
+    if (result.rows.length === 0)
+      return res.status(400).json({ message: "Invalid or expired token" });
+
+    const user = result.rows[0];
+
+    // Check expiration
+    if (new Date() > new Date(user.reset_password_expires))
+      return res.status(400).json({ message: "Token expired" });
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    await pool.query(
+      `UPDATE users 
+       SET password = $1, reset_password_token = NULL, reset_password_expires = NULL 
+       WHERE id = $2`,
+      [hashedPassword, user.id]
+    );
+
+    res.json({ message: "Password reset successful ✅" });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 
 export default router;

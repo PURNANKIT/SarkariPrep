@@ -11,6 +11,7 @@ import QuizPage from "./component/Quiz/QuizPage";
 import Practice from "./component/Practice/Practice";
 import Syllabus from "./component/Syllabus/Syllabus";
 import SyllabusQuestions from "./component/pages/SyllabusQuestions";
+import ResetPassword from "./component/pages/ResetPassword";
 
 export default function App() {
   return (
@@ -27,6 +28,8 @@ export default function App() {
           <Route path="/syllabus/:job" element={<Syllabus/>}/>
           <Route path="/question/:id" element={<SyllabusQuestions/>} />
           {/* <Route path="*" element={<Navigate to="/dashboard" replace />} /> */}
+          {/* <Route path="/reset-password" element={<ResetPassword/>} /> */}
+          <Route path="/reset-password/:token" element={<ResetPassword/>} />
         </Routes>
       </BrowserRouter>
     </UserProvider>
