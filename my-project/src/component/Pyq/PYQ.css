@@ -1,0 +1,90 @@
+/* PYQ Page CSS */
+.pyq-page {
+  width: 100%;
+  background: #f7f9fc;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.pyq-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pyq-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.pyq-sub {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.pyq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pyq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  margin-bottom: 12px;
+  background: #f0f4ff;
+  border-left: 5px solid #1e40af;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.pyq-item:hover {
+  background: #e4eaff;
+  transform: translateY(-2px);
+}
+
+.pyq-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e3a8a;
+  width: 70px;
+}
+
+.pyq-name {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+  padding-left: 10px;
+}
+
+.pyq-btn {
+  background: #1e40af;
+  padding: 8px 14px;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.pyq-btn:hover {
+  background: #1e3a8a;
+}
+
+.loading, .error, .empty {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #444;
+}

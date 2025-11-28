@@ -5,7 +5,6 @@ import jobInfo from "../JobInfo/jobInfo";
 import { useUser } from "../context/UserContext";
 import "./QuizPage.css";
 
-/* slug -> broad key mapping (keeps old behavior) */
 const slugToKey = {
   ssc: "SSC",
   upsc: "UPSC",

@@ -8,6 +8,8 @@ import { connectDB } from "./db.js";
 import practiceRoutes from "./routes/Practice.js";
 import syllabusRoutes from "./Syllabus/Syllabus.js";
 import authRoute from "./routes/auth.js";
+import pyqRoutes from "./routes/pyq.js";
+
 
 dotenv.config();
 
@@ -21,6 +23,8 @@ app.use("/", userRoutes);
 app.use("/api/practice", practiceRoutes);
 app.use("/api/syllabus", syllabusRoutes);
 app.use("/", authRoute);
+app.use("/api/pyq", pyqRoutes);
+
 
 // --- Serve React frontend in production ---
 if (process.env.NODE_ENV === "production") {
