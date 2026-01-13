@@ -1,0 +1,193 @@
+.admin-navbar {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Optional subtle pattern overlay */
+.admin-navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.admin-logo {
+  color: white;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(56, 189, 248, 0.1);
+}
+
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.admin-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.admin-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.admin-link.active {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.admin-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.admin-logout-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-logout-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.admin-logout-btn:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.35);
+}
+
+.admin-logout-btn:hover::before {
+  left: 100%;
+}
+
+.admin-logout-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+}
+
+/* Optional user profile/avatar styling */
+.admin-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-user-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-user-role {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-navbar {
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  .admin-navbar-right {
+    gap: 15px;
+  }
+  
+  .admin-link {
+    padding: 6px 10px;
+    font-size: 13.5px;
+  }
+  
+  .admin-logout-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .admin-logo {
+    font-size: 18px;
+  }
+}

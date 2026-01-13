@@ -1,0 +1,309 @@
+/* 🌟 Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #1a1a40;
+  color: #fff;
+  padding: 12px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* 🔹 Left Section */
+.left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* 🔸 Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* 🔸 Links + Search */
+.links-search-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* 🔸 Links next to Logo */
+.nav-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* ✅ Search bar (below links, aligned with Home) */
+.search_bar {
+  margin-top: 8px;
+  width: 350px; /* bada kiya */
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease; /* smooth transition */
+}
+
+/* Hover effect */
+.search_bar:hover {
+  border-color: #ffd700; /* golden border on hover */
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3); /* subtle gold shadow */
+}
+
+/* Focus effect */
+.search_bar:focus {
+  border-color: #ffd700;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+/* 🔸 Right Section (Login Form) */
+.nav-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 🔹 Login Form */
+.login-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* 🔸 Input Fields */
+.form-inputs input {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-inputs input:focus {
+  border-color: #ffd700;
+}
+
+/* ⚠️ Error Message */
+.error-text {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: -4px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* 🔸 Forget Password + Signup Links */
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.auth-links a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* 🔘 Login Button */
+.login-btn {
+  background-color: #ffd700;
+  color: #1a1a40;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #fff;
+  color: #1a1a40;
+}
+
+/* ✅ Success Message */
+.success-text {
+  color: #4caf50;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+/* ✅ Login success message */
+.login-success-container {
+  background: #28a745; /* green background */
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeOut 3s forwards;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-left: 10px; /* right section me adjust */
+}
+
+.login-success-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-text {
+  font-weight: 600;
+  color: #fd0c0c;
+}
+
+.logout-btn {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff1e1e;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  z-index: 100;
+}
+
+.profile-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.logout-btn-red {
+  width: 100%;
+  padding: 8px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn-red:hover {
+  background: #d93636;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .search_bar {
+    width: 90%; /* responsive */
+  }
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .left-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .search_bar {
+    width: 90%;
+  }
+
+  .login-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .form-inputs {
+    align-items: center;
+  }
+
+  .form-inputs input {
+    width: 220px;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}

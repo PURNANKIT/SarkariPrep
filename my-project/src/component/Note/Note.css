@@ -1,0 +1,149 @@
+/* ===========================
+   NOTES PAGE WRAPPER
+=========================== */
+.notes-wrap {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Title */
+.notes-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* ===========================
+   LOCKED VIEW (Not Logged In)
+=========================== */
+.locked-area {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+
+.big-lock {
+  font-size: 60px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.lock-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.lock-btn:hover {
+  background: #0056c7;
+}
+
+/* ===========================
+   NOTES GRID
+=========================== */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Single Note Card */
+.note-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Title */
+.note-job {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.note-desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* View Button */
+.view-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: #28a745;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.view-btn:hover {
+  background: #1d7f32;
+}
+
+/* Download Button */
+.download-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: #ff9800;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background: #e08700;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+  .notes-wrap {
+    padding: 20px;
+  }
+
+  .note-card {
+    padding: 18px;
+  }
+
+  .notes-title {
+    font-size: 24px;
+  }
+}
