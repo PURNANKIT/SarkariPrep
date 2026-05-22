@@ -15,7 +15,7 @@ const AskAi = () => {
   const [isUploadMenuOpen, setIsUploadMenuOpen] = useState(false);
   
   const fileInputRef = useRef(null);
-  const API_KEY = "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";
+  // const API_KEY = "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";
 
   const features = [
     {
@@ -180,35 +180,26 @@ const AskAi = () => {
     setInput("");
     setUploadedFiles([]);
     setLoading(true);
+try {
+  const response = await fetch("http://127.0.0.1:5000/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message: userMessage.content }),
+  });
 
-    try {
-      const response = await fetch("https://api.openai.com/v1/responses", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-4.1-mini",
-          input: userMessage.content,
-        }),
-      });
+  const data = await response.json();
 
-      const data = await response.json();
-      let aiReply = "No response generated.";
+  if (!response.ok) {
+    throw new Error(data.error || "Something went wrong");
+  }
 
-      if (
-        data.output &&
-        data.output[0] &&
-        data.output[0].content &&
-        data.output[0].content[0] &&
-        data.output[0].content[0].text
-      ) {
-        aiReply = data.output[0].content[0].text;
-      }
-
-      setMessages((prev) => [...prev, { role: "assistant", content: aiReply }]);
-    } catch (error) {
+  setMessages((prev) => [
+    ...prev,
+    { role: "assistant", content: data.reply },
+  ]);
+}catch (error) {
       console.error("API Error:", error);
       setMessages((prev) => [
         ...prev,

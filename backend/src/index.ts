@@ -1,5 +1,6 @@
 import express, { type Request, type Response } from "express";
 import cors from "cors";
+import chatRoute from "./routes/chat.js";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import path from "path";
@@ -21,16 +22,19 @@ const app = express();
 app.use(
   cors({
     origin: [
+      
       "http://localhost:5173", // frontend
       "http://localhost:5174", // admin panel local
       "https://jasper-unaffixed-denisha.ngrok-free.dev", // froward ngrok
     ],
+      
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
 app.use(express.json());
+app.use("/api", chatRoute);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
